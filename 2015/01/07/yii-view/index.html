@@ -110,18 +110,22 @@
 <p>此路由方法不会自动添加当前的Mocule名和Controller名<br>使用Yii:app()-&gt;getController()-&gt;createUrl()与$this-&gt;createUrl()x相同</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span>  <span class="variable">$this</span><span class="variable">-&gt;createUrl</span>(<span class="string">"actionName"</span>, <span class="keyword">array</span>(<span class="string">"id"</span>=&gt;<span class="string">"1"</span>));<span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
 
-<p>此路由方法会自用执行当前controller下默认的action名，生成的地址跟路由的配置有关；<br>2.直接生成超链接</p>
+<p>此路由方法会自用执行当前controller下默认的action名，生成的地址跟路由的配置有关；</p>
+<p>2.直接生成超链接</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span>  Chtml::link(string <span class="variable">$text</span>, mixed <span class="variable">$url</span>=<span class="string">'#'</span>, <span class="variable">$htmlOption</span> =<span class="keyword">array</span>());<span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
 
 <p>连接到admin/user/p/1<br>&lt;?php  Chtml::link(“加载更多”, array(“admin/user/“, “p”=&gt;1));?&gt;</p>
 <p>链接到blog<br>&lt;?php  CHtml::link(‘Delete’,”www.mashuangshuang.com”; ?&gt;</p>
-<p>3.主题url路径</p>
+<p>3.直接生成图片</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span> Chtml::image(string <span class="variable">$src</span>, string <span class="variable">$src</span>, <span class="keyword">array</span> <span class="variable">$htmlOption</span>);<span class="preprocessor">?&gt;</span></div><div class="line"><span class="preprocessor">&lt;?php</span> Chtml::image(Yii::app()<span class="variable">-&gt;baseUrl</span>.<span class="string">"/assets/image/demo.jpg"</span>);<span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
+
+<p>4.主题url路径</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span>  Yii::app()<span class="variable">-&gt;theme</span><span class="variable">-&gt;baseUrl</span>; <span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
 
-<p>4.根目录路径</p>
+<p>5.根目录路径</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span> Yii::app()<span class="variable">-&gt;baseUrl</span>;<span class="preprocessor">?&gt;</span></div><div class="line"><span class="preprocessor">&lt;?php</span> Yii::app()<span class="variable">-&gt;request</span><span class="variable">-&gt;baseUrl</span>;<span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
 
-<p>5.引入脚本文件</p>
+<p>6.引入静态文件</p>
 <p>PHP输出</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="subst">&lt;?</span>php </div><div class="line"><span class="variable">$cs</span>        <span class="subst">=</span> Yii<span class="tag">::app</span>()<span class="subst">-&gt;</span>clientScript;</div><div class="line"><span class="variable">$basePath</span>  <span class="subst">=</span> Yii<span class="tag">::app</span>()<span class="subst">-&gt;</span>baseUrl;</div><div class="line"><span class="variable">$cs</span><span class="subst">-&gt;</span>registerCssFile(<span class="variable">$basePath</span> <span class="built_in">.</span> <span class="string">'/assets/css/reset.css'</span>);</div><div class="line"><span class="variable">$cs</span><span class="subst">-&gt;</span>registerCoreScript(<span class="string">'jquery'</span>, CClientScript<span class="tag">::POS_END</span>); <span class="comment">//引入核心库，yii juqery库</span></div><div class="line"><span class="variable">$cs</span><span class="subst">-&gt;</span>registerScriptFile(<span class="variable">$basePath</span> <span class="built_in">.</span> <span class="string">'/assets/js/common.js'</span>, CClientScript<span class="tag">::POS_END</span>); <span class="comment">//可以指定脚本的位置</span></div><div class="line"><span class="preprocessor">?&gt;</span><span class="markup"></span></div></pre></td></tr></table></figure>
 
