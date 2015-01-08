@@ -107,7 +107,7 @@
 <p>1.Yii输出url，后面附件GET参数,array类型,key=&gt;value</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="preprocessor">&lt;?php</span> <span class="keyword">echo</span> Yii::app()<span class="variable">-&gt;createUrl</span>(<span class="string">"/controllerName/actionName"</span>, <span class="keyword">array</span>(<span class="string">"id"</span>=&gt;<span class="string">"1"</span>));<span class="preprocessor">?&gt;</span></span></div></pre></td></tr></table></figure>
 
-<p>不会自动添加当前的Mocule名和Controller名<br>使用Yii:app()-&gt;getController()-&gt;createUrl()与$this-&gt;createUrl()x相同</p>
+<p>此路由方法不会自动添加当前的Mocule名和Controller名<br>使用Yii:app()-&gt;getController()-&gt;createUrl()与$this-&gt;createUrl()x相同</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span> <span class="keyword">echo</span> <span class="variable">$this</span><span class="variable">-&gt;createUrl</span>(<span class="string">"actionName"</span>, <span class="keyword">array</span>(<span class="string">"id"</span>=&gt;<span class="string">"1"</span>));<span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
 
 <p>此路由方法会自用执行当前controller下默认的action名，生成的地址跟路由的配置有关；<br>2.直接生成一个a标签</p>
