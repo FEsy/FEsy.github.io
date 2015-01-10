@@ -1124,7 +1124,7 @@ a.article-title:hover {
   width: 6.875em;
   height: 6.875em;
   margin: 0 auto;
-  background: no-repeat url("author-img-data") left top;
+  background: no-repeat url("image/author.jpg") left top;
   -webkit-background-size: 6.875em 6.875em;
   -moz-background-size: 6.875em 6.875em;
   background-size: 6.875em 6.875em;
@@ -1188,6 +1188,7 @@ a.article-title:hover {
   color: #fff;
   font-size: 180%;
   padding: 0.5em;
+  text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
   .social-font a {
