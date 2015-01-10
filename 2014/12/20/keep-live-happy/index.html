@@ -114,7 +114,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mashuangshuang.com/2014/12/20/keep-live-happy/" data-id="szb7sjhm98jf75fd" class="article-share-link">Share</a>
+      <a data-url="http://mashuangshuang.com/2014/12/20/keep-live-happy/" data-id="cg09o2t91l2kvx7w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
@@ -274,8 +274,6 @@
 		
 		<a href="https://github.com/FEsy" target="_blank" title="github"></a>
 		
-		
-		
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
@@ -300,7 +298,29 @@
     
 <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
 <script type="text/javascript">
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		var fixedDom = $("#header");
 
+		if(scrollTop >= 300){
+			if (window.XMLHttpRequest) {
+				fixedDom.css({
+					position: "fixed",
+					top: 0,
+					height: 50
+				});
+			} else {
+				fixedDom.css({
+					top: scrolls
+				});
+			}
+		}else{
+			fixedDom.css({
+				position : "relative"
+				height : 300
+			})
+		}
+	})
 </script>
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">

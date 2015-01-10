@@ -312,6 +312,8 @@ body {
   height: 300px;
   position: relative;
   border-bottom: 1px solid #ddd;
+  -webkit-transiton: all 0.5s linear;
+  transiton: all 0.5s linear;
 }
 #header:before,
 #header:after {
