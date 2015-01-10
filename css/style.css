@@ -1083,7 +1083,7 @@ a.article-title:hover {
 #page-nav .space {
   color: #ddd;
 }
-footer {
+.wrapperfooter {
   margin-top: 1em;
   background: #1f1f1f;
   padding: 0 2% 0.5em;
@@ -1110,7 +1110,7 @@ footer {
   display: block;
   width: 0.5em;
   height: 6.25em;
-  border-right: 0.125em solid color-white;
+  border-right: 0.125em solid #fff;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
@@ -1153,7 +1153,7 @@ footer {
   line-height: 1.65;
   width: 90%;
   margin: 0 auto;
-  color: color-white;
+  color: #fff;
 }
 @media only screen and (min-width: 768px) {
   .info {
@@ -1185,7 +1185,7 @@ footer {
   float: left;
   display: block;
   width: 14%;
-  color: color-white;
+  color: #fff;
   font-size: 180%;
   padding: 0.5em;
 }
@@ -1224,7 +1224,7 @@ footer {
   font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
   font-size: 0.6em;
   width: 100%;
-  color: color-white;
+  color: #fff;
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
@@ -1233,7 +1233,7 @@ footer {
   }
 }
 .copyright a {
-  color: color-white;
+  color: #fff;
 }
 .copyright a:hover {
   color: color-blue;
