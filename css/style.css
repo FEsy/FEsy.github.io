@@ -1085,7 +1085,7 @@ a.article-title:hover {
 }
 footer {
   margin-top: 1em;
-  background: color-footer;
+  background: #1f1f1f;
   padding: 0 2% 0.5em;
 }
 #footer {
@@ -1149,10 +1149,8 @@ footer {
   }
 }
 .info {
-  font-family: font-custom-family;
-  -webkit-font-smoothing: ;
-  font-size: 64px;
-  line-height: 1.3em;
+  font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  line-height: 1.65;
   width: 90%;
   margin: 0 auto;
   color: color-white;
@@ -1188,7 +1186,7 @@ footer {
   display: block;
   width: 14%;
   color: color-white;
-  font-size: 94px;
+  font-size: 180%;
   padding: 0.5em;
 }
 @media tablet {
@@ -1204,7 +1202,7 @@ footer {
 .social-font a[title="github"]::before,
 .social-font a[title="facebook"]::before,
 .social-font a[title="linkedin"]::before {
-  font-family: font-icon-family;
+  font-family: "FontAwesome";
   -webkit-font-smoothing: ;
 }
 .social-font a[title="weibo"]::before {
@@ -1223,8 +1221,8 @@ footer {
   content: "\f08c";
 }
 .copyright {
-  -webkit-font-smoothing: ;
-  font-family: font-custom-family;
+  font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font-size: 0.6em;
   width: 100%;
   color: color-white;
   text-align: center;
@@ -1250,7 +1248,7 @@ footer {
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 22.400000000000002px;
+  line-height: 150%;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1259,7 +1257,7 @@ footer {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 .article-entry code {
   background: #eee;
@@ -1306,7 +1304,7 @@ footer {
   padding-right: 20px;
 }
 .article-entry .highlight .line {
-  height: 22.400000000000002px;
+  height: 150%;
 }
 .article-entry .gist {
   margin: 0 -20px;
@@ -1318,7 +1316,7 @@ footer {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
@@ -1475,7 +1473,7 @@ pre .javascript .function {
   list-style: disc;
 }
 .widget {
-  line-height: 1.6em;
+  line-height: 1.5;
   word-wrap: break-word;
   font-size: 0.9em;
 }
