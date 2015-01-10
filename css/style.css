@@ -1099,7 +1099,7 @@ footer {
   height: 14em;
   margin: 0 auto;
 }
-@media mini {
+@media only screen and (min-width: 768px) {
   #footer .line {
     width: 10em;
     float: left;
@@ -1113,7 +1113,7 @@ footer {
   border-right: 0.125em solid color-white;
   margin: 0 auto;
 }
-@media mini {
+@media only screen and (min-width: 768px) {
   #footer .line span {
     position: absolute;
     left: 3em;
@@ -1141,7 +1141,7 @@ footer {
   -ms-transform: rotateZ(360deg);
   transform: rotateZ(360deg);
 }
-@media mini {
+@media only screen and (min-width: 768px) {
   .author {
     position: absolute;
     top: 6em;
@@ -1155,7 +1155,7 @@ footer {
   margin: 0 auto;
   color: color-white;
 }
-@media mini {
+@media only screen and (min-width: 768px) {
   .info {
     margin: 4.5em 0 2em 0;
     float: left;
@@ -1168,12 +1168,12 @@ footer {
   float: left;
   padding-left: 3%;
 }
-@media phone {
+@media only screen and (min-width: 568px) {
   .social-font {
     padding-left: 20%;
   }
 }
-@media mini {
+@media only screen and (min-width: 768px) {
   .social-font {
     width: 18em;
     position: absolute;
@@ -1189,7 +1189,7 @@ footer {
   font-size: 180%;
   padding: 0.5em;
 }
-@media tablet {
+@media only screen and (min-width: 1024px) {
   .social-font a {
     padding: 0.3em;
   }
@@ -1227,7 +1227,7 @@ footer {
   color: color-white;
   text-align: center;
 }
-@media mini {
+@media only screen and (min-width: 768px) {
   .copyright {
     float: left;
   }
