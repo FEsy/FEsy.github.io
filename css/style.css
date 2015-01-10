@@ -1104,17 +1104,19 @@ a.article-title:hover {
   font-size: 0.85em;
   text-align: center;
 }
-.icon-weibo:before,
-.icon-github:before,
-.icon-twitter:before,
-.icon-facebook:before,
-.icon-stack-overflow:before,
-.icon-email:before,
-.icon-google_plus:before,
-.icon-linkedin:before {
+.social-font a[title="weibo"]::before,
+.social-font a[title="twitter"]::before,
+.social-font a[title="github"]::before,
+.social-font a[title="facebook"]::before {
   font-family: "FontAwesome";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.social-font a[title="weibo"]::before {
+  content: "\f18a";
+}
+.social-font a[title="github"]::before {
+  content: "\f09b";
 }
 .article-entry pre,
 .article-entry .highlight {
