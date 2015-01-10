@@ -384,7 +384,7 @@ body {
   margin-top: 16px;
 }
 #main-nav {
-  float: left;
+  float: right;
   margin-left: -15px;
 }
 .nav-icon,
@@ -436,6 +436,7 @@ body {
   }
 }
 #sub-nav {
+  display: none;
   float: right;
   margin-right: -15px;
 }
@@ -1098,6 +1099,19 @@ a.article-title:hover {
 #footer-info {
   line-height: 1.6em;
   font-size: 0.85em;
+  text-align: center;
+}
+.icon-weibo:before,
+.icon-github:before,
+.icon-twitter:before,
+.icon-facebook:before,
+.icon-stack-overflow:before,
+.icon-email:before,
+.icon-google_plus:before,
+.icon-linkedin:before {
+  font-family: "FontAwesome";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .article-entry pre,
 .article-entry .highlight {
