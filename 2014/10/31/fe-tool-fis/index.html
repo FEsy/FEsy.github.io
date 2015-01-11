@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>fe-tool-fis | sy‘s blog</title>
+  <title>前端静态资源编译工具 | sy‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  <meta name="description" content="此工具（rsd）非常适合小项目，小公司，不管是纯前端的项目还是基于php后端项目开发非常的适用，其实它也不是一个单纯的工具，还不如说是一套前端集成解决方案，不像其他前端自动化打包工具（grunt,gulp）一样进行繁琐的配置，同时工具只是减少了重复的流程；而百度的fis:专为解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题的工具框架，我觉得fis它太庞大，不适合我">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fe-tool-fis">
+<meta property="og:title" content="前端静态资源编译工具">
 <meta property="og:url" content="http://mashuangshuang.com/2014/10/31/fe-tool-fis/">
 <meta property="og:site_name" content="sy‘s blog">
 <meta property="og:description" content="此工具（rsd）非常适合小项目，小公司，不管是纯前端的项目还是基于php后端项目开发非常的适用，其实它也不是一个单纯的工具，还不如说是一套前端集成解决方案，不像其他前端自动化打包工具（grunt,gulp）一样进行繁琐的配置，同时工具只是减少了重复的流程；而百度的fis:专为解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题的工具框架，我觉得fis它太庞大，不适合我">
+<meta property="og:image" content="/img/20150111fileDir">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fe-tool-fis">
+<meta name="twitter:title" content="前端静态资源编译工具">
 <meta name="twitter:description" content="此工具（rsd）非常适合小项目，小公司，不管是纯前端的项目还是基于php后端项目开发非常的适用，其实它也不是一个单纯的工具，还不如说是一套前端集成解决方案，不像其他前端自动化打包工具（grunt,gulp）一样进行繁琐的配置，同时工具只是减少了重复的流程；而百度的fis:专为解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题的工具框架，我觉得fis它太庞大，不适合我">
  
   
@@ -88,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      fe-tool-fis
+      前端静态资源编译工具
     </h1>
   
 
@@ -97,11 +98,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>此工具（rsd）非常适合小项目，小公司，不管是纯前端的项目还是基于php后端项目开发非常的适用，其实它也不是一个单纯的工具，还不如说是一套前端集成解决方案，不像其他前端自动化打包工具（grunt,gulp）一样进行繁琐的配置，同时工具只是减少了重复的流程；而百度的fis:专为解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题的工具框架，我觉得fis它太庞大，不适合我们公司的业务；</p>
-<p>不过大家可以先了解一下（grunt[官网],gulp[官网],fis[官网])；</p>
+<p>不过大家可以先了解一下（grunt<a href="http://www.gruntjs.net/" target="_blank" rel="external">1</a>,gulp<a href="http://gulpjs.com/" target="_blank" rel="external">2</a>,fis<a href="http://fis.baidu.com/" target="_blank" rel="external">3</a>)；</p>
 <p>所以rsd就来了，它是基于基于 fis 的工具，但是rsd并不会那么的庞大，rsd最棒的特性在于所有的静态资源加上md5戳，你再也不要担心，手机缓存等问题，同时除了发布静态文件以外，还可以把php,model,view等文件最后一起发布到新的目录下,还有就是它能够支持本地预览，对于其他特性，一般的打包工具都可以实现;<br><a id="more"></a></p>
 <h2 id="一-此工具主要解决：">一.此工具主要解决：</h2>
 <p>1.前端语言的预编译，无需额外的编译工具（sass-&gt;css,coffee-script-&gt;javascript）<br>2.静态资源的压缩(css,js,image,html)<br>3.静态资源发布路径实现非覆盖式发布（所有静态资源都以md5摘要形式发布）<br>4.静态文件修改实时监听，实时预览<br>5.静态资源CDN部署<br>6.采用内容摘要作为缓存更新依据<br>7.支持本地调试（java，php环境）<br>8.不需要插件的配置等一系列繁琐的工作；<br>9.更好的是它支持非静态文件（view,model）最后一起发布到线上版本；<br>10.一行命令搞定一切</p>
-<p>我觉得rsd已经满足了我们日常项目开发，接下来要做的就是运用到项目中，至于具体的安装步骤不在叙述，具体可参考：[详情描述][4]</p>
+<p>我觉得rsd已经满足了我们日常项目开发，接下来要做的就是运用到项目中，至于具体的安装步骤不在叙述，具体可参考：<a href="https://github.com/fouber/static-resource-digest-project" target="_blank" rel="external">详情描述</a></p>
 <h2 id="二-此工具还未尝试的特性">二.此工具还未尝试的特性</h2>
 <p>1.未能提供静态资源的合并<br>2.未提供css sprites 图片合并</p>
 <h2 id="三-使用过程中遇到的问题">三.使用过程中遇到的问题</h2>
@@ -109,8 +110,8 @@
 <p>其它问题还未遇到，遇到后在这儿补充的，大家也是哈</p>
 <h2 id="四-我的结果">四.我的结果</h2>
 <p>文件目录结构</p>
-<p>其中1030rsd是线下文件文件目录结构，通过rsd发布以后生成output目录，即线上文件目录结构；<br>发布前：index-view.php中静态资源的路径<br><img src="" alt="20150111fileDir"><br>发布后：index-view.php中静态资源的路径<br><img src="" alt="20150111fileDir"><br>发布代码<br><img src="" alt="20150111pubCode"><br>文件监听和浏览器自动刷新<br><img src="" alt="20150111"><br>本地部署以及测试<br><img src="" alt="20150111"><br>在浏览器中访问<br><img src="" alt="20150111"><br>在这里得感谢@[前端农民工][12]提供的工具，这是他的[github][13]以及他的博客,大家可以看看他的博客写的很不错哦！；</p>
-<p>如果大家在学习过程中遇到问题，可以提出来或者直接向作者求助[issue][14]</p>
+<p>其中1030rsd是线下文件文件目录结构，通过rsd发布以后生成output目录，即线上文件目录结构；<br>发布前：index-view.php中静态资源的路径<br><img src="/img/20150111fileDir" alt="20150111fileDir"><br>发布后：index-view.php中静态资源的路径<br><img src="" alt="20150111fileDir"><br>发布代码<br><img src="" alt="20150111pubCode"><br>文件监听和浏览器自动刷新<br><img src="" alt="20150111"><br>本地部署以及测试<br><img src="" alt="20150111"><br>在浏览器中访问<br><img src="" alt="20150111"><br>在这里得感谢@<a href="http://weibo.com/fouber" target="_blank" rel="external">前端农民工</a>提供的工具，这是他的<a href="https://github.com/fouber" target="_blank" rel="external">github</a>以及他的博客,大家可以看看他的博客写的很不错哦！；</p>
+<p>如果大家在学习过程中遇到问题，可以提出来或者直接向作者求助<a href="https://github.com/fouber/blog/issues/5#issuecomment-61228523" target="_blank" rel="external">issue</a></p>
 
       
     </div>
@@ -147,7 +148,7 @@
 </article>
 
 
-<div class="ds-thread" data-thread-key="2014/10/31/fe-tool-fis/" data-title="fe-tool-fis" data-url="http://mashuangshuang.com/2014/10/31/fe-tool-fis/"></div>
+<div class="ds-thread" data-thread-key="2014/10/31/fe-tool-fis/" data-title="前端静态资源编译工具" data-url="http://mashuangshuang.com/2014/10/31/fe-tool-fis/"></div>
 <section class="comments">
   
   <script type="text/javascript">
