@@ -103,8 +103,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$open_sans_font_url = “//fonts.googleapis.<span class="keyword">com</span>/CSS?family=Open+San<span class="variable">s:300italic</span>,<span class="number">400</span>italic,<span class="number">600</span>italic,<span class="number">300</span>,<span class="number">400</span>,<span class="number">600</span>&su</div></pre></td></tr></table></figure>
 
 <p>直接注释；</p>
-<p>后台插件中搜索 Disable Google Fonts，安装，安装成功后，然后启用就可以禁止加载goole字体了，</p>
-<p>2.如何使用不同single模板<br>3.如何使用不同category模板<br>4.显示文章摘要<br>后台设置文章的摘要，使用the_excerpt标签 (缺点：需要改动模版，而且显示的是纯文本，无摘要时自动截取正文内容，摘要无法统一。优点：一劳永逸直接把想要的部分来做摘要)</p>
+<p>后台插件中搜索 Disable Google Fonts，安装，安装成功后，然后启用就可以禁止加载goole字体了，<br><a id="more"></a><br>2.如何使用不同single模板<br>3.如何使用不同category模板<br>4.显示文章摘要<br>后台设置文章的摘要，使用the_excerpt标签 (缺点：需要改动模版，而且显示的是纯文本，无摘要时自动截取正文内容，摘要无法统一。优点：一劳永逸直接把想要的部分来做摘要)</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="preprocessor">&lt;?php</span>  <span class="keyword">if</span>(!is_single()) </span></div><div class="line">     { the_excerpt(); }  </div><div class="line">    <span class="keyword">else</span>  </div><div class="line">    { the_content(__(<span class="string">'(more…)'</span>)); </div><div class="line">    <span class="comment">//或者&lt;?php the_content();  }</span></div><div class="line"><span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
 
 <p>如果默认没有设置文章摘要，wordpress默认会截取正文内容中前几十个字，但是格式可能不是你想要的，如下图红色标示所示；</p>
