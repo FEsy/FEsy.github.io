@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 心灵忏悔 | sy‘s blog</title>
+  <title>grunt系列之入门（一） | sy‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
- <meta name="description" content="生活点滴记录，记录我的每一天。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sy‘s blog">
-<meta property="og:url" content="http://mashuangshuang.com/tags/心灵忏悔/">
+ <meta name="description" content="what grunt
+JavaScript 项目构建工具任务运行器，对于需要反复重复的任务，例如压缩、编译、单元测试、代码检查等，自动化工具可以减轻你的劳动，简化你的工作；
+通过grunt工具可以帮你创建一般web应用开发所用到的css,js等，拥有一个web前端开发的目录结构；丢弃原始的ctrl+c，ctr+v；以前我做开发web应用一般都不做css,js等文件压缩处理（项目周期短，访问量不大）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="grunt系列之入门（一）">
+<meta property="og:url" content="http://mashuangshuang.com/2015/01/11/grunt-study/">
 <meta property="og:site_name" content="sy‘s blog">
-<meta property="og:description" content="生活点滴记录，记录我的每一天。">
+<meta property="og:description" content="what grunt
+JavaScript 项目构建工具任务运行器，对于需要反复重复的任务，例如压缩、编译、单元测试、代码检查等，自动化工具可以减轻你的劳动，简化你的工作；
+通过grunt工具可以帮你创建一般web应用开发所用到的css,js等，拥有一个web前端开发的目录结构；丢弃原始的ctrl+c，ctr+v；以前我做开发web应用一般都不做css,js等文件压缩处理（项目周期短，访问量不大）">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sy‘s blog">
-<meta name="twitter:description" content="生活点滴记录，记录我的每一天。">
+<meta name="twitter:title" content="grunt系列之入门（一）">
+<meta name="twitter:description" content="what grunt
+JavaScript 项目构建工具任务运行器，对于需要反复重复的任务，例如压缩、编译、单元测试、代码检查等，自动化工具可以减轻你的劳动，简化你的工作；
+通过grunt工具可以帮你创建一般web应用开发所用到的css,js等，拥有一个web前端开发的目录结构；丢弃原始的ctrl+c，ctr+v；以前我做开发web应用一般都不做css,js等文件压缩处理（项目周期短，访问量不大）">
  
   
     <link rel="alternative" href="/atom.xml" title="sy‘s blog" type="application/atom+xml">
@@ -70,39 +76,84 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/01/01/2014Memory-2015look/" class="archive-article-date">
-  <time datetime="2015-01-01T15:15:13.000Z" itemprop="datePublished">Jan 1</time>
+        <section id="main"><article id="post-grunt-study" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/11/grunt-study/" class="article-date">
+  <time datetime="2015-01-11T12:39:32.000Z" itemprop="datePublished">Jan 11 2015</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/01/01/2014Memory-2015look/">回顾2014展望2015</a>
+    <h1 class="article-title" itemprop="name">
+      grunt系列之入门（一）
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="what_grunt">what grunt</h3>
+<p>JavaScript 项目构建工具任务运行器，对于需要反复重复的任务，例如压缩、编译、单元测试、代码检查等，自动化工具可以减轻你的劳动，简化你的工作；</p>
+<p>通过grunt工具可以帮你创建一般web应用开发所用到的css,js等，拥有一个web前端开发的目录结构；丢弃原始的ctrl+c，ctr+v；<br>以前我做开发web应用一般都不做css,js等文件压缩处理（项目周期短，访问量不大），有了grunt之后无需人工操作；</p>
+<h3 id="why_grunt">why grunt</h3>
+<p>在web开发中上线之前我们可能会做的一些事情;</p>
+<p>文件目录的调整</p>
+<p>html,css注释换行等操作</p>
+<p>css代码压缩合并</p>
+<p>js,css代码语法的检测</p>
+<p>js代码压缩合并</p>
+<p>图片的压缩</p>
+<p>其实在我以前做的项目中,2-6这个过程未曾完整的实现过;一呢感觉比较的麻烦,同时也没有对这方面深入的研究,二呢我们做的项目都是一些小的应用,开发周期短,没有后期的维护,项目一两周就结束的那种;</p>
+<h3 id="grunt_插件">grunt 插件</h3>
+<p>coffeScript<br>jade<br>Js Hint<br>Less<br>Sass<br>require<br>handlebars 模板<br>我想有grunt这个工具之后,我会慢慢在后期的项目逐渐引入和实践起来,路漫漫其修远兮 吾将上下而求索;</p>
+<h3 id="grunt_不足">grunt 不足</h3>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mashuangshuang.com/2015/01/11/grunt-study/" data-id="n00c5yjmqggk2jvc" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/01/11/wordpress-wx-site3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">wordpress开发微site(三）</div>
+    </a>
+  
+</nav>
+
+  
 </article>
+
+
+<div class="ds-thread" data-thread-key="2015/01/11/grunt-study/" data-title="grunt系列之入门（一）" data-url="http://mashuangshuang.com/2015/01/11/grunt-study/"></div>
+<section class="comments">
   
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"msy"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script> 
   
-    </div></section>
-  
+</section>
 </section>
         
           <aside id="sidebar">
