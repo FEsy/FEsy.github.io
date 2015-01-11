@@ -13,8 +13,8 @@
 还有这样的命名
 123incrementerForMainLoopWhichSpansFromTenToTwenty}createNewMemberIfAgeOverTwentyOneAndMoonIsFull
 
-你写的代码就像你讲的故事，故事的情节能够让人理解
-避免使用全局变量">
+避免以字面意思定义函数名和变量名
+貌似翻译的有些不对，原句是Avoid describing a val">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascrpit最佳实践（一）">
 <meta property="og:url" content="http://mashuangshuang.com/2015/01/11/javascript-bast-practices-part/">
@@ -27,8 +27,8 @@
 还有这样的命名
 123incrementerForMainLoopWhichSpansFromTenToTwenty}createNewMemberIfAgeOverTwentyOneAndMoonIsFull
 
-你写的代码就像你讲的故事，故事的情节能够让人理解
-避免使用全局变量">
+避免以字面意思定义函数名和变量名
+貌似翻译的有些不对，原句是Avoid describing a val">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascrpit最佳实践（一）">
 <meta name="twitter:description" content="#
@@ -39,8 +39,8 @@
 还有这样的命名
 123incrementerForMainLoopWhichSpansFromTenToTwenty}createNewMemberIfAgeOverTwentyOneAndMoonIsFull
 
-你写的代码就像你讲的故事，故事的情节能够让人理解
-避免使用全局变量">
+避免以字面意思定义函数名和变量名
+貌似翻译的有些不对，原句是Avoid describing a val">
  
   
     <link rel="alternative" href="/atom.xml" title="sy‘s blog" type="application/atom+xml">
@@ -124,12 +124,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="#">#</h1>
-<p>变量名以及函数命名应该简单易懂；</p>
+<h3 id="变量名以及函数命名应该简单易懂；">变量名以及函数命名应该简单易懂；</h3>
 <p>糟糕的命名：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">x1</span> fe2 xbqne</div></pre></td></tr></table></figure>
 
 <p>还有这样的命名</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="title">incrementerForMainLoopWhichSpansFromTenToTwenty</span></div><div class="line">}</div><div class="line">createNewMemberIfAgeOverTwentyOneAndMoonIsFull</div></pre></td></tr></table></figure>
+
+<h3 id="避免以字面意思定义函数名和变量名">避免以字面意思定义函数名和变量名</h3>
+<p>貌似翻译的有些不对，原句是<code>Avoid describing a value with your variable or function name.</code></p>
+<p>是否18岁，有些地区可能不是这个意思</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">isOverEighteen</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
+
+<p>你可以这样定义</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">isLegalAge</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
 
 <p>你写的代码就像你讲的故事，故事的情节能够让人理解</p>
 <h2 id="避免使用全局变量">避免使用全局变量</h2>
