@@ -5,33 +5,15 @@
   
   <title>javascrpt 获取元素的方法 | sy‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
- <meta name="description" content="整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；
-dom方法获取元素节点
-元素ID：getElementById方法返回一个对象，该对象对应文档中当前元素节点；
-1element.getElementById(id);
-
-元素类名：返回对象数组
-1element.getElementsByClass">
+ <meta name="description" content="整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascrpt 获取元素的方法">
 <meta property="og:url" content="http://mashuangshuang.com/2015/01/17/javascrpt-dom-selecor/">
 <meta property="og:site_name" content="sy‘s blog">
-<meta property="og:description" content="整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；
-dom方法获取元素节点
-元素ID：getElementById方法返回一个对象，该对象对应文档中当前元素节点；
-1element.getElementById(id);
-
-元素类名：返回对象数组
-1element.getElementsByClass">
+<meta property="og:description" content="整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascrpt 获取元素的方法">
-<meta name="twitter:description" content="整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；
-dom方法获取元素节点
-元素ID：getElementById方法返回一个对象，该对象对应文档中当前元素节点；
-1element.getElementById(id);
-
-元素类名：返回对象数组
-1element.getElementsByClass">
+<meta name="twitter:description" content="整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；">
  
   
     <link rel="alternative" href="/atom.xml" title="sy‘s blog" type="application/atom+xml">
@@ -115,6 +97,8 @@ dom方法获取元素节点
     <div class="article-entry" itemprop="articleBody">
       
         <p>整理一下js中获取元素节点几种方法，只有获取到目标，才可以对目标进行下一步处理；而有效的，快捷的获取目标元素，会对目标元素的下一步处理有重要的影响；</p>
+<a id="more"></a>
+
 <h3 id="dom方法获取元素节点">dom方法获取元素节点</h3>
 <p>元素ID：<br>getElementById方法返回一个对象，该对象对应文档中当前元素节点；</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element<span class="variable">.getElementById</span>(<span class="keyword">id</span>);</div></pre></td></tr></table></figure>
@@ -122,6 +106,7 @@ dom方法获取元素节点
 <p>元素类名：返回对象数组</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.getElementsByClassName(.);</div></pre></td></tr></table></figure>
 
+<p><code>注意</code>：此方法是h5新增的api，ie8一下不支持；</p>
 <p>标签名：<br>getElementsByTagName方法返回对象数组，每个对象分别对应文档中当前tag元素节点；</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.getElementsByTagName(<span class="keyword">tag</span>);</div></pre></td></tr></table></figure>
 
@@ -129,11 +114,19 @@ dom方法获取元素节点
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">"p"</span>).length;</div></pre></td></tr></table></figure>
 
 <p>实例：<br>获取id为demo元素的下所有的列表元素；</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="built_in">document</span>.getElementById(<span class="string">"#demo"</span>);</div><div class="line"><span class="keyword">var</span> li = demo.getElementsByTagName(<span class="string">"p"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="built_in">document</span>.getElementById(<span class="string">"#demo"</span>);</div><div class="line"><span class="keyword">var</span> liObj = demo.getElementsByTagName(<span class="string">"li"</span>);</div></pre></td></tr></table></figure>
 
-<h3 id="h5新增APi">h5新增APi</h3>
-<p>querySelector()<br>querySelectorAll()</p>
+<h3 id="h5新增APi:querySelector_,querySelectorAll">h5新增APi:querySelector ,querySelectorAll</h3>
+<p>都接收字符串参数，参数必须是合法的css选择符；不仅仅是id,class,tag,复杂的css选择器都支持，ul&gt;li:nth-of-type(2)；<br>参数selectors可以包含多个css选择器，用逗号隔开</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.<span class="keyword">query</span><span class="variable">Selector</span>(<span class="string">"selector1,selector1,selector1,selector1"</span>);</div><div class="line">document.<span class="keyword">query</span><span class="variable">SelectorAll</span>(<span class="string">"selector1,selector1,selector1,selector1"</span>);</div></pre></td></tr></table></figure>
+
+<p>querySelector(param)<br>return：返回第一个匹配的元素<br>querySelectorAll(param)<br>return：返回所有匹配的元素，如果找到匹配元素，返回nodelist对象，否则返回空</p>
+<p>注：目前主流浏览器都支持这两类api,ie8一下还是不可以；</p>
 <h3 id="js框架如jquery等">js框架如jquery等</h3>
+<p>jquery中获取元素方法比较多，也经常用就不做总结；</p>
+<p>原生js与jquery获取元素，返回的值不一样的；</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</div><div class="line"><span class="keyword">var</span> demo  = $(<span class="string">"#demo"</span>)[<span class="number">0</span>]</div><div class="line"><span class="keyword">var</span> demo = $(<span class="string">"#demo"</span>).get(<span class="number">0</span>);</div><div class="line"><span class="keyword">var</span> demo = docment.querySelector(<span class="string">"#demo"</span>);</div></pre></td></tr></table></figure>
+
 
       
     </div>
