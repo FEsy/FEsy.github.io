@@ -104,10 +104,13 @@
 <p>getElementById方法返回一个对象，该对象对应文档中当前元素节点；</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element<span class="variable">.getElementById</span>(<span class="keyword">id</span>);</div></pre></td></tr></table></figure>
 
-<h3 id="元素类名：返回对象数组">元素类名：返回对象数组</h3>
+<h3 id="元素类名：">元素类名：</h3>
+<p>返回对象数组</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.getElementsByClassName(<span class="class"><span class="keyword">class</span>);</span></div></pre></td></tr></table></figure>
 
-<p><code>注意</code>：此方法是h5新增的api，ie8一下不支持；</p>
+<p><code>注意</code>：此方法是h5新增的api，ie8以下不支持,可以自己定义一个函数，用以兼容低版本浏览器；</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function getElementsByClassName(node, <span class="class"><span class="keyword">class</span><span class="title">Name</span>)</span>{</div><div class="line">	<span class="keyword">if</span>(node.getElementsByClassName){</div><div class="line">		<span class="keyword">return</span> node.getELementsByClassName(<span class="class"><span class="keyword">class</span><span class="title">Name</span>);</span></div><div class="line">	}</div><div class="line">	<span class="title">else</span>{</div><div class="line">		<span class="keyword">var</span> results = [];</div><div class="line">		<span class="keyword">var</span> elems = node.getElemensByTagName(<span class="string">"*"</span>);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;elems.length;i++){</div><div class="line">			<span class="keyword">if</span>(elems[i].<span class="class"><span class="keyword">class</span><span class="title">Name</span>.<span class="title">indexOf</span>(<span class="title">className</span>)!=-1)</span>{</div><div class="line">				results[results.length] = elems[i];</div><div class="line">			}</div><div class="line">		}</div><div class="line">		<span class="keyword">return</span> results;</div><div class="line">	}</div><div class="line">}</div></pre></td></tr></table></figure>
+
 <h3 id="标签名：">标签名：</h3>
 <p>getElementsByTagName方法返回对象数组，每个对象分别对应文档中当前tag元素节点；</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.getElementsByTagName(<span class="keyword">tag</span>);</div></pre></td></tr></table></figure>
@@ -126,7 +129,7 @@
 <p>return：返回第一个匹配的元素</p>
 <h3 id="querySelectorAll(param)">querySelectorAll(param)</h3>
 <p>return：返回所有匹配的元素，如果找到匹配元素，返回nodelist对象，否则返回空</p>
-<p>注：目前主流浏览器都支持这两类api,ie8一下还是不可以；</p>
+<p><code>注</code>：目前主流浏览器都支持这两类api,ie8一下还是不可以；</p>
 <h3 id="js框架如jquery等">js框架如jquery等</h3>
 <p>jquery中获取元素方法比较多，也经常用就不做总结；</p>
 <p>原生js与jquery获取元素，返回的值是不一样的；</p>
