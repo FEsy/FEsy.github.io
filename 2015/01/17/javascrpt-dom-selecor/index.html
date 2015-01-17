@@ -129,7 +129,7 @@
 <p>注：目前主流浏览器都支持这两类api,ie8一下还是不可以；</p>
 <h3 id="js框架如jquery等">js框架如jquery等</h3>
 <p>jquery中获取元素方法比较多，也经常用就不做总结；</p>
-<p>原生js与jquery获取元素，返回的值不一样的；</p>
+<p>原生js与jquery获取元素，返回的值是不一样的；</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</div><div class="line"><span class="keyword">var</span> demo  = $(<span class="string">"#demo"</span>)[<span class="number">0</span>]</div><div class="line"><span class="keyword">var</span> demo = $(<span class="string">"#demo"</span>).get(<span class="number">0</span>);</div><div class="line"><span class="keyword">var</span> demo = docment.querySelector(<span class="string">"#demo"</span>);</div></pre></td></tr></table></figure>
 
 
