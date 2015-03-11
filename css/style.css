@@ -324,7 +324,6 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  height: 40px;
 }
 #header:before {
   top: 0;
